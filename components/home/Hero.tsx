@@ -30,15 +30,27 @@ const Hero = ({
       > */}
       <section
         lang={langName}
-        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-16 md:pt-24 text-center"
+        className="relative mx-auto max-w-full px-4 sm:px-6 lg:px-8 pb-16 pt-16 md:pt-24 text-center overflow-hidden"
       >
-        <h1>
-          {locale.title1} <LineText>{locale.title2}</LineText> {locale.title3}
-        </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-2xl tracking-tight text-slate-700 dark:text-slate-400">
-          {/* {siteConfig.description} */}
-          {locale.description}
-        </p>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover -z-2"
+        >
+          <source src="/Herovideo.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 -z-10"></div>
+        <div className="relative z-10">
+          <h1>
+            {locale.title1} <LineText>{locale.title2}</LineText> {locale.title3}
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-2xl tracking-tight text-white">
+            {/* {siteConfig.description} */}
+            {locale.description}
+          </p>
+        </div>
       </section>
       {/* </motion.div> */}
       <div className="flex justify-center gap-4">
@@ -50,7 +62,7 @@ const Hero = ({
               alt="Nexty.dev Logo"
               className="w-4 h-4"
             />{" "}
-            Get SaaS Boilerplate
+            Haz que tu nino duerma mejor
           </Link>
         </Button>
       </div>
@@ -59,3 +71,4 @@ const Hero = ({
 };
 
 export default Hero;
+

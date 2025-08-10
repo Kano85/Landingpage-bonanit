@@ -29,8 +29,7 @@ const Header = () => {
         <div className="flex items-center md:gap-x-12 flex-1">
           <Link
             href="/"
-            aria-label="Landing Page Boilerplate"
-            title="Landing Page Boilerplate"
+            title="Bona nit logo "
             className="flex items-center space-x-1 font-bold"
           >
             <Image
@@ -86,8 +85,8 @@ const Header = () => {
                   <div>
                     <Link
                       href="/"
-                      aria-label="Landing Page Boilerplate"
-                      title="Landing Page Boilerplate"
+                      aria-label="Bona nit logo"
+                      title="Bona nit logo"
                       className="inline-flex items-center"
                     >
                       <Image
@@ -149,3 +148,4 @@ const Header = () => {
 };
 
 export default Header;
+

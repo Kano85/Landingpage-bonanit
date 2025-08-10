@@ -1,9 +1,9 @@
 {
   "Hero": {
-    "title1": "Ship",
-    "title2": "Landing Page",
-    "title3": "Fast",
-    "description": "A free, open-source, and powerful landing page boilerplate, ideal for various projects, enabling you to create a landing page in under an hour."
+    "title1": "Laura",
+    "title2": "Bona nit",
+    "title3": "Montoy",
+    "description": "Asesoría de sueño infantil basada en evidencia, con rutinas a medida y acompañamiento cercano para que toda la familia descanse mejor."
   },
   "SocialProof": {
     "maker": "makers ship fast"
@@ -42,6 +42,7 @@
     "description6": "!"
   },
   "CTAButton": {
-    "title": "Get Source Code"
+    "title": "Reserva tu asesoria"
   }
 }
+
