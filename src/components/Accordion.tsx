@@ -12,20 +12,25 @@ export default function Accordion({ title, children }: AccordionProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-[var(--color-border)] rounded-sm">
+    <div className="border-b border-[#e8e4df]">
       <button
-        className="w-full text-left p-4 font-medium text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-colors duration-200 flex justify-between items-center"
+        className="w-full text-left py-5 px-6 font-bold text-[#5a7c7f] hover:bg-[#faf8f5] transition-colors duration-200 flex justify-between items-center group"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
+        style={{ fontFamily: 'var(--font-playfair)' }}
       >
-        <span className="text-sm">{title}</span>
+        <span className="text-lg">{title}</span>
         <span
-          className={`transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          className={`transform transition-transform duration-300 text-[#7d8b88] group-hover:text-[#5a7c7f] ${isOpen ? 'rotate-180' : ''}`}
         >
           ▼
         </span>
       </button>
-      {isOpen && <div className="p-4 pt-0">{children}</div>}
+      {isOpen && (
+        <div className="px-6 pb-6 bg-[#fefdfb] border-t border-[#e8e4df]">
+          {children}
+        </div>
+      )}
     </div>
   );
 }

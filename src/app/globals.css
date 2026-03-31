@@ -34,16 +34,16 @@
 }
 */
 
-/* Variables de color para un diseño cálido y familiar */
+/* Variables de color para un diseño elegante y sofisticado */
 :root {
-  --color-primary: #4a90e2; /* Azul suave para confianza */
-  --color-secondary: #7ed321; /* Verde suave para tranquilidad */
-  --color-accent: #f5a623; /* Naranja cálido para energía positiva */
-  --color-background: #fefefe; /* Blanco crema suave */
-  --color-surface: #f8f9fa; /* Gris muy claro para superficies */
-  --color-text: #2d3748; /* Gris oscuro para texto principal */
-  --color-text-muted: #718096; /* Gris medio para texto secundario */
-  --color-border: #e2e8f0; /* Gris claro para bordes */
+  --color-primary: #5a7c7f; /* Verde oliva mejorado */
+  --color-secondary: #8b9a95; /* Verde oliva claro */
+  --color-accent: #d4a574; /* Dorado cálido */
+  --color-background: #fefdfb; /* Blanco crema mejorado */
+  --color-surface: #faf8f5; /* Superficie cálida */
+  --color-text: #3d4a48; /* Texto oscuro refinado */
+  --color-text-muted: #7d8b88; /* Texto secundario */
+  --color-border: #e8e4df; /* Borde suave */
 }
 
 @theme inline {
@@ -53,21 +53,22 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Estilos base para tipografía profesional */
+/* Estilos base para tipografía elegante */
 body {
   background: var(--color-background);
   color: var(--color-text);
   font-family:
-    var(--font-geist-sans),
+    var(--font-inter),
     system-ui,
     -apple-system,
     sans-serif;
-  line-height: 1.6;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.3px;
 }
 
-/* Estilos para headings con jerarquía visual */
+/* Estilos para headings con jerarquía visual elegante */
 h1,
 h2,
 h3,
@@ -75,66 +76,129 @@ h4,
 h5,
 h6 {
   color: var(--color-text);
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
+  font-family: var(--font-playfair), serif;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
 }
 h2 {
-  font-size: 1.875rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.875rem;
+  font-weight: 700;
 }
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 h5 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 h6 {
   font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.875rem;
 }
 
-/* Enlaces con colores cálidos */
+/* Estilos para párrafos */
+p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  margin-bottom: 1.25rem;
+}
+
+p strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Enlaces con colores elegantes */
 a {
   color: var(--color-primary);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 a:hover {
-  color: var(--color-accent);
+  color: var(--color-secondary);
+  text-decoration: underline;
 }
 
-/* Botones con estilo elegante */
+/* Botones con estilo refinado */
 .btn-primary {
   background-color: var(--color-primary);
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 0.5rem;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  letter-spacing: 0.5px;
 }
 
 .btn-primary:hover {
-  background-color: #357abd;
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(90, 124, 127, 0.2);
 }
 
 .btn-secondary {
   background-color: var(--color-secondary);
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 0.5rem;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  letter-spacing: 0.5px;
 }
 
 .btn-secondary:hover {
-  background-color: #68b619;
+  background-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(90, 124, 127, 0.2);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(212, 165, 116, 0.25);
+}
+
+.btn-accent:hover {
+  background-color: #c9975e;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(201, 151, 94, 0.3);
 }
 
 /* Utilidades adicionales para diseño minimalista */

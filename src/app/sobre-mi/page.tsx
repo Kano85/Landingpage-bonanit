@@ -2,8 +2,10 @@
 
 import Image from 'next/image';
 import Section from '@/components/Section';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function SobreMi() {
+  const { t } = useLanguage();
   return (
     <>
       {/* Hero Section - Soy Laura Montoy */}
@@ -25,21 +27,15 @@ export default function SobreMi() {
             {/* Contenido */}
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-[#7f968e] mb-6">
-                Soy Laura Montoy
+                {t('about.hero.title')}
               </h1>
 
               <p className="text-lg text-[#2e4e6d] mb-6 leading-relaxed">
-                Hace más de una década que me mudé a Berlín donde{' '}
-                <strong>nació mi familia y</strong> de alguna forma{' '}
-                <strong>una nueva versión de mí</strong>.
+                {t('about.hero.p1')}
               </p>
 
               <p className="text-lg text-[#2e4e6d] leading-relaxed">
-                De formación soy licenciada en biotecnología y profesora de
-                secundaria. He impartido clases de Biología y Español durante
-                los últimos ocho años y mi amor por la ciencia siempre ha estado
-                presente en mi forma de ver y entender el mundo, pero fue{' '}
-                <strong>la maternidad la que realmente me transformó.</strong>
+                {t('about.hero.p2')}
               </p>
             </div>
           </div>
@@ -53,31 +49,19 @@ export default function SobreMi() {
             {/* Contenido */}
             <div className="text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Cómo empezó todo
+                {t('about.how.title')}
               </h2>
 
               <p className="text-base md:text-lg mb-6 leading-relaxed">
-                Cuando nació mi primer hijo descubrí algo inesperado: una{' '}
-                <strong>fascinación absoluta por el sueño infantil</strong>.
-                Leía, investigaba y me formaba para acompañarlo mejor en sus
-                noches y ayudarnos a descansar.
+                {t('about.how.p1')}
               </p>
 
               <p className="text-base md:text-lg mb-6 leading-relaxed">
-                Con la llegada de mi segunda hija surgieron nuevos desafíos.
-                Decidí{' '}
-                <strong>certificarme como asesora de sueño infantil</strong> a
-                los dos meses. Fue un proceso intenso, de estudio, práctica y
-                compromiso, del que me siento muy orgullosa.
+                {t('about.how.p2')}
               </p>
 
               <p className="text-base md:text-lg leading-relaxed">
-                He vivido <strong>muchas experiencias</strong>: parto natural y
-                cesárea, lactancia exclusiva y fórmula, un bebé dormilón y otro
-                que no tanto. Todo me enseñó que{' '}
-                <strong>
-                  no hay una única forma de criar ni de descansar.
-                </strong>
+                {t('about.how.p3')}
               </p>
             </div>
 
@@ -113,27 +97,19 @@ export default function SobreMi() {
             {/* Contenido */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#2e4e6d] mb-8">
-                Mi forma de trabajar
+                {t('about.work.title')}
               </h2>
 
               <p className="text-base md:text-lg text-[#2e4e6d] mb-6 leading-relaxed">
-                Hoy combino mis <strong>dos pasiones</strong>: sigo enseñando a
-                tiempo parcial y dedico el resto de mi energía a acompañar a
-                familias como asesora de sueño.
+                {t('about.work.p1')}
               </p>
 
               <p className="text-base md:text-lg text-[#2e4e6d] mb-6 leading-relaxed">
-                Trabajo con un <strong>enfoque respetuoso</strong>, basado en la{' '}
-                <strong>ciencia</strong> y <strong>adaptado</strong> a cada
-                familia. Con colecho o sin él, lactancia o biberón, en la misma
-                habitación o en camas separadas: todo es válido. Construyo{' '}
-                <strong>soluciones reales y sostenibles</strong>.
+                {t('about.work.p2')}
               </p>
 
               <p className="text-base md:text-lg text-[#2e4e6d] leading-relaxed">
-                Acompañaros no es solo un trabajo, es mi vocación. Estoy aquí
-                para que el descanso vuelva a formar parte de vuestra vida,
-                porque <strong>dormir bien no debería ser un lujo.</strong>
+                {t('about.work.p3')}
               </p>
             </div>
           </div>
@@ -149,23 +125,22 @@ export default function SobreMi() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#7a664d]/80 to-[#7a664d]/60"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-[#7a664d]/80 to-[#7a664d]/60"></div>
 
         <div className="relative z-10 text-center text-white px-4 max-w-2xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-8">
-            Reserva tu cita gratuita
+            {t('about.cta.title')}
           </h2>
 
           <p className="text-lg md:text-xl mb-8 text-gray-100 leading-relaxed">
-            Hablemos sobre tus necesidades y cómo puedo acompañarte en el camino
-            del sueño
+            {t('about.cta.p')}
           </p>
 
           <a
             href="https://tidycal.com/bonanit/videollamada-previa-gratuita"
-            className="inline-block bg-white hover:bg-gray-100 text-[#2e4e6d] px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="inline-flex items-center justify-center rounded-full !bg-[#d4a574] px-8 py-4 text-base font-bold !text-white no-underline shadow-[0_10px_24px_rgba(212,165,116,0.25)] transition-all duration-300 hover:translate-y-[-2px] hover:!bg-[#c9975e] hover:!text-white hover:no-underline hover:shadow-[0_14px_30px_rgba(201,151,94,0.3)] md:px-12 md:py-5 md:text-lg"
           >
-            ¡Conozcámonos!
+            {t('about.cta.button')}
           </a>
         </div>
       </section>

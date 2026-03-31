@@ -5,12 +5,14 @@ import Section from '@/components/Section';
 import SectionTitle from '@/components/SectionTitle';
 import TestimonialCard from '@/components/TestimonialCard';
 import Accordion from '@/components/Accordion';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Home() {
+  const { t } = useLanguage();
   return (
     <>
       {/* Hero Section with Video Background */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#1a3a4a] to-[#0f2530]">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-linear-to-b from-[#4a5f5d] to-[#3a4e4c]">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
@@ -24,192 +26,180 @@ export default function Home() {
             type="video/mp4"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/50"></div>
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Dormir mejor criando con amor
+        <div className="absolute inset-0 bg-linear-to-b from-black/45 via-black/55 to-black/65"></div>
+        <div className="relative z-10 text-center text-white px-6 max-w-4xl">
+          <h1
+            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.7)]"
+            style={{ fontFamily: 'var(--font-playfair)', color: '#ffffff' }}
+          >
+            {t('hero.title')}
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed text-gray-100">
-            Soy Laura Montoy, creadora de Bonanit y te acompaño de manera
-            respetuosa a mejorar el descanso de tu bebé.
+          <p
+            className="text-xl md:text-2xl lg:text-3xl mb-12 leading-relaxed text-[#f8f3eb] drop-shadow-[0_3px_12px_rgba(0,0,0,0.55)]"
+            style={{ fontFamily: 'var(--font-inter)' }}
+          >
+            {t('hero.subtitle')}
           </p>
           <a
             href="https://tidycal.com/bonanit/videollamada-previa-gratuita"
-            className="inline-block bg-[#184554] hover:bg-[#0f3142] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center justify-center rounded-full !bg-[#d4a574] px-10 py-5 text-base font-bold !text-white no-underline shadow-[0_10px_24px_rgba(212,165,116,0.25)] transition-all duration-300 hover:translate-y-[-2px] hover:!bg-[#c9975e] hover:!text-white hover:no-underline hover:shadow-[0_14px_30px_rgba(201,151,94,0.3)]"
           >
-            Conozcámonos
+            {t('hero.cta')}
           </a>
         </div>
       </section>
 
       {/* Questions Section */}
-      <Section className="bg-[#f5f3ec] py-12 md:py-20">
-        <div className="max-w-4xl mx-auto space-y-3 md:space-y-4">
+      <Section className="bg-[#faf8f5] py-20 md:py-28">
+        <div className="max-w-4xl mx-auto space-y-4 md:space-y-5">
           <div className="text-center">
-            <div className="inline-block bg-[#7f968e] text-white px-6 md:px-8 py-3 rounded-full text-base md:text-lg font-medium hover:bg-[#6d8077] transition-colors">
-              ¿Estás agotada y con la paciencia al límite?
+            <div
+              className="inline-block bg-[#7d8b88] text-white px-7 md:px-10 py-4 rounded-full text-base md:text-lg font-medium hover:bg-[#6d7b78] transition-colors duration-300"
+              style={{ fontFamily: 'var(--font-inter)' }}
+            >
+              {t('questions.q1')}
             </div>
           </div>
           <div className="text-center">
-            <div className="inline-block bg-[#7f968e] text-white px-6 md:px-8 py-3 rounded-full text-base md:text-lg font-medium hover:bg-[#6d8077] transition-colors">
-              ¿No logras descansar por las noches y ya te está pasando factura?
+            <div
+              className="inline-block bg-[#7d8b88] text-white px-7 md:px-10 py-4 rounded-full text-base md:text-lg font-medium hover:bg-[#6d7b78] transition-colors duration-300"
+              style={{ fontFamily: 'var(--font-inter)' }}
+            >
+              {t('questions.q2')}
             </div>
           </div>
           <div className="text-center">
-            <div className="inline-block bg-[#7f968e] text-white px-6 md:px-8 py-3 rounded-full text-base md:text-lg font-medium hover:bg-[#6d8077] transition-colors">
-              ¿Sientes que la maternidad te desborda?
+            <div
+              className="inline-block bg-[#7d8b88] text-white px-7 md:px-10 py-4 rounded-full text-base md:text-lg font-medium hover:bg-[#6d7b78] transition-colors duration-300"
+              style={{ fontFamily: 'var(--font-inter)' }}
+            >
+              {t('questions.q3')}
             </div>
           </div>
           <div className="text-center">
-            <div className="inline-block bg-[#7f968e] text-white px-6 md:px-8 py-3 rounded-full text-base md:text-lg font-medium hover:bg-[#6d8077] transition-colors">
-              ¿Te sientes sola, con o sin red de apoyo?
+            <div
+              className="inline-block bg-[#7d8b88] text-white px-7 md:px-10 py-4 rounded-full text-base md:text-lg font-medium hover:bg-[#6d7b78] transition-colors duration-300"
+              style={{ fontFamily: 'var(--font-inter)' }}
+            >
+              {t('questions.q4')}
             </div>
           </div>
         </div>
       </Section>
 
       {/* Not Alone Section */}
-      <Section className="bg-[#e5e2d4] py-12 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
+      <Section className="bg-[#f5f0e6] py-20 md:py-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
           <div className="order-2 md:order-1">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2e4e6d] mb-6">
-              No tienes que vivirlo sola
+            <h2
+              className="text-3xl md:text-5xl font-bold text-[#5a7c7f] mb-8"
+              style={{ fontFamily: 'var(--font-playfair)' }}
+            >
+              {t('alone.title')}
             </h2>
-            <div className="space-y-4 text-[#2e4e6d] text-base md:text-lg leading-relaxed">
-              <p>
-                Te dicen que es solo una fase, que pasará rápido…{' '}
-                <strong>pero eso no lo hace menos duro.</strong> La falta de
-                sueño puede generar frustración y hacer que no disfrutes
-                plenamente esta etapa tan especial. Y si además, crías{' '}
-                <strong>lejos de tu red de apoyo</strong>, todo se vuelve aún
-                más difícil.
-              </p>
-              <p>
-                Yo también estuve ahí,{' '}
-                <strong>descubriendo la maternidad</strong> en otro país, lejos
-                de mi gente y mi idioma. Por eso hoy acompaño a otras familias,
-                para que <strong>no tengan que vivirlo solas</strong>.
-              </p>
+            <div
+              className="space-y-6 text-[#3d4a48] text-lg md:text-xl leading-relaxed"
+              style={{ fontFamily: 'var(--font-inter)' }}
+            >
+              <p>{t('alone.p1')}</p>
+              <p>{t('alone.p2')}</p>
             </div>
           </div>
-          <div className="relative min-h-[320px] order-1 md:order-2">
+          <div className="relative min-h-[380px] order-1 md:order-2">
             <Image
               src="/images/postnatal-period-with-mother-child-3-2000x1333.jpg"
               alt="Madre con bebé descansando"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="rounded-xl shadow-lg object-cover"
+              className="rounded-2xl shadow-xl object-cover"
             />
           </div>
         </div>
       </Section>
 
       {/* Pullquote */}
-      <Section className="bg-gradient-to-r from-[#7f968e] to-[#6d8077] py-16 md:py-24">
+      <Section className="bg-linear-to-r from-[#5a7c7f] to-[#7d8b88] py-20 md:py-32">
         <blockquote className="text-center max-w-3xl mx-auto">
-          <p className="text-2xl md:text-4xl font-semibold text-white leading-relaxed">
-            &ldquo;Te tomo de la mano para hacer los cambios adecuados
-            <br />y transformar vuestras noches.&rdquo;
+          <p
+            className="text-3xl md:text-5xl font-semibold text-white leading-relaxed"
+            style={{ fontFamily: 'var(--font-playfair)' }}
+          >
+            &ldquo;{t('quote')}&rdquo;
           </p>
         </blockquote>
       </Section>
 
       {/* Real Support Section */}
-      <Section className="bg-[#e5e2d4] py-12 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
-          <div className="relative min-h-[320px]">
+      <Section className="bg-[#f5f0e6] py-20 md:py-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center max-w-6xl mx-auto">
+          <div className="relative min-h-[380px]">
             <Image
               src="/images/DSC02792-1-scaled.jpg"
               alt="Laura Montoy, especialista en sueño infantil"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="rounded-xl shadow-lg object-cover"
+              className="rounded-2xl shadow-xl object-cover"
             />
           </div>
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2e4e6d] mb-6">
-              Aquí tienes un apoyo real
+            <h2
+              className="text-3xl md:text-5xl font-bold text-[#5a7c7f] mb-8"
+              style={{ fontFamily: 'var(--font-playfair)' }}
+            >
+              {t('support.title')}
             </h2>
-            <div className="space-y-4 text-[#2e4e6d] text-base md:text-lg leading-relaxed">
-              <p>
-                Si sientes que <strong>necesitas acompañamiento real</strong>{' '}
-                para mejorar el sueño de tu bebé, con mi plan de 4 semanas
-                tendrás a <strong>alguien a tu lado</strong>.
-              </p>
-              <p>
-                Diseñaré un{' '}
-                <strong>plan de sueño respetuoso y personalizado</strong>, y
-                estaremos en contacto con videollamadas y mensajes.
-              </p>
-              <p>
-                No estás sola: <strong>recuperar el descanso</strong> es
-                posible, sin esperar a que &quot;pase la fase&quot;.
-              </p>
+            <div
+              className="space-y-6 text-[#3d4a48] text-lg md:text-xl leading-relaxed"
+              style={{ fontFamily: 'var(--font-inter)' }}
+            >
+              <p>{t('support.p1')}</p>
+              <p>{t('support.p2')}</p>
+              <p>{t('support.p3')}</p>
             </div>
           </div>
         </div>
       </Section>
 
       {/* FAQ Section */}
-      <Section className="bg-[#e5e2d4] py-12 md:py-20">
-        <div className="max-w-4xl mx-auto">
-          <SectionTitle title="Preguntas frecuentes" />
-          <div className="space-y-3 mt-12">
-            <Accordion title="¿Mi bebé va a llorar?">
-              <p className="text-[#2e4e6d] leading-relaxed">
-                Muy probablemente no. Haré todo lo posible para que así sea,
-                incluso si significa ir más despacio. Mi plan de sueño infantil
-                se ajusta siempre que hay llanto y es profundamente respetuoso.
-                Seguimos el ritmo de vuestro bebé en todo momento, priorizando
-                siempre su bienestar.
+      <Section className="bg-[#f5f0e6] py-20 md:py-28">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2
+              className="text-3xl md:text-5xl font-bold text-[#5a7c7f] mb-6"
+              style={{ fontFamily: 'var(--font-playfair)' }}
+            >
+              Preguntas frecuentes
+            </h2>
+          </div>
+          <div className="space-y-4 mt-12">
+            <Accordion title={t('faq.q1')}>
+              <p className="text-[#3d4a48] leading-relaxed text-lg">
+                {t('faq.a1')}
               </p>
             </Accordion>
-            <Accordion title="¿Es compatible el plan con la lactancia materna y el colecho?">
-              <p className="text-[#2e4e6d] leading-relaxed">
-                Sí, completamente. El plan de sueño se adapta a vuestros deseos
-                y necesidades. Favorezco una crianza con apego, respetando la
-                lactancia materna y el colecho. Lo esencial es encontrar juntos
-                la mejor manera para que vuestro bebé descanse bien y se sienta
-                seguro.
+            <Accordion title={t('faq.q2')}>
+              <p className="text-[#3d4a48] leading-relaxed text-lg">
+                {t('faq.a2')}
               </p>
             </Accordion>
-            <Accordion title="¿Hay que quedarse en casa y evitar los viajes?">
-              <p className="text-[#2e4e6d] leading-relaxed">
-                Durante las cuatro semanas del plan de sueño, recomiendo
-                priorizar la rutina y no cambiar su espacio de sueño. Estaremos
-                introduciendo cambios importantes en cómo tu bebé se duerme, y
-                conviene no sumar otros grandes ajustes al mismo tiempo. La
-                calma y la rutina serán clave en el proceso.
+            <Accordion title={t('faq.q3')}>
+              <p className="text-[#3d4a48] leading-relaxed text-lg">
+                {t('faq.a3')}
               </p>
             </Accordion>
-            <Accordion title="¿Tendré que seguir horarios estrictos para siempre?">
-              <p className="text-[#2e4e6d] leading-relaxed">
-                Durante el plan es importante seguir los horarios lo más
-                fielmente posible para evitar el sobrecansancio, que dificulta
-                la adaptación a los nuevos hábitos. Una vez que tu bebé los haya
-                adquirido, podrás ser más flexible y hacer excepciones. De
-                hecho, los niños con buenos hábitos de sueño suelen adaptarse
-                mejor a los cambios de horario.
+            <Accordion title={t('faq.q4')}>
+              <p className="text-[#3d4a48] leading-relaxed text-lg">
+                {t('faq.a4')}
               </p>
             </Accordion>
-            <Accordion title="¿Cuánto tiempo va a tardar en verse resultados?">
-              <p className="text-[#2e4e6d] leading-relaxed">
-                Depende de cada bebé, pero en general los primeros resultados
-                suelen notarse hacia las dos semanas y seguirá mejorando durante
-                unas semanas más. Al ser un plan respetuoso seguimos siempre su
-                ritmo, por lo que a veces los avances tardan un poco más. Lo
-                importante es ser constantes y confiar en el proceso para
-                mejorar su descanso.
+            <Accordion title={t('faq.q5')}>
+              <p className="text-[#3d4a48] leading-relaxed text-lg">
+                {t('faq.a5')}
               </p>
             </Accordion>
-            <Accordion title="¿Qué pasa si algo no funciona o no os sentís cómodos?">
-              <p className="text-[#2e4e6d] leading-relaxed">
-                Lo más importante en este proceso es la comunicación conmigo. Si
-                algo no se siente bien o no funciona, no es lo correcto.
-                Necesito que seáis transparentes y me contéis cómo os sentís
-                para poder adaptar el plan si es necesario. Juntos encontraremos
-                la forma que mejor se ajuste a vuestra familia y al descanso de
-                vuestro bebé.
+            <Accordion title={t('faq.q6')}>
+              <p className="text-[#3d4a48] leading-relaxed text-lg">
+                {t('faq.a6')}
               </p>
             </Accordion>
           </div>
@@ -217,15 +207,17 @@ export default function Home() {
       </Section>
 
       {/* Testimonials Section */}
-      <Section className="bg-[#7f968e] py-12 md:py-20">
+      <Section className="bg-[#5a7c7f] py-20 md:py-28">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Así han vivido algunas familias la experiencia de trabajar
-              conmigo…
+          <div className="mb-16 text-center">
+            <h2
+              className="text-3xl md:text-5xl font-bold mb-6 text-white"
+              style={{ fontFamily: 'var(--font-playfair)' }}
+            >
+              {t('testimonials.title')}
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
             <TestimonialCard
               name="Sonia y Bertrán"
               role="mamá y papá de Gema, 12 meses"
@@ -255,13 +247,13 @@ export default function Home() {
       </Section>
 
       {/* CTA Final Section */}
-      <Section className="bg-gradient-to-r from-[#7f968e] to-[#6d8077] py-16 md:py-24">
+      <Section className="bg-linear-to-r from-[#5a7c7f] to-[#7d8b88] py-20 md:py-32">
         <div className="max-w-3xl mx-auto text-center">
           <a
             href="https://tidycal.com/bonanit/videollamada-previa-gratuita"
-            className="inline-block bg-white hover:bg-gray-100 text-[#7f968e] font-semibold px-8 md:px-12 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="inline-flex items-center justify-center rounded-full !bg-[#d4a574] px-10 py-5 text-lg font-bold !text-white no-underline shadow-[0_10px_24px_rgba(212,165,116,0.25)] transition-all duration-300 hover:translate-y-[-2px] hover:!bg-[#c9975e] hover:!text-white hover:no-underline hover:shadow-[0_14px_30px_rgba(201,151,94,0.3)] md:px-14"
           >
-            ¿Te parece si agendamos una videollamada gratuita?
+            {t('cta.final')}
           </a>
         </div>
       </Section>

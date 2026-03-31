@@ -11,6 +11,8 @@ export interface Service {
   description: string[];
   features: ServiceFeature[];
   image: string;
+  imageWidth: number;
+  imageHeight: number;
   buttonText: string;
   buttonLink: string;
   isPopular?: boolean;
@@ -25,6 +27,8 @@ export const services: Service[] = [
     price: '395 €',
     priceNumber: 395,
     image: '/images/DSC02705-1-scaled.jpg',
+    imageWidth: 1920,
+    imageHeight: 2560,
     features: [
       { text: 'Análisis de sueño mediante cuestionario inicial y bitácora' },
       { text: 'Creación de un plan de sueño específico para tu bebé' },
@@ -47,6 +51,8 @@ export const services: Service[] = [
     price: '265 €',
     priceNumber: 265,
     image: '/images/DSC02759-1-scaled.jpg',
+    imageWidth: 2048,
+    imageHeight: 2560,
     features: [
       { text: 'Ajustes y afinado del plan de sueño' },
       { text: '2 videollamadas de 40 min' },
@@ -67,6 +73,8 @@ export const services: Service[] = [
     price: '89 €',
     priceNumber: 89,
     image: '/images/DSC02831-2-scaled.jpg',
+    imageWidth: 2048,
+    imageHeight: 2560,
     features: [
       { text: 'Cuestionario previo' },
       { text: 'Videollamada de 45 min' },
