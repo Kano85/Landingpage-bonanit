@@ -180,6 +180,7 @@ export const es = {
   'legal.provider.title': 'Prestador de servicios',
   'legal.contact.title': 'Medios de contacto',
   'legal.contact.emailLabel': 'Correo electrónico:',
+  'legal.contact.email': 'info@bonanitsuenoinfantil.com',
   'legal.contact.other': 'Otros medios de contacto: Instagram',
   'legal.company.title': 'Información sobre la empresa',
   'legal.disputes.title': 'Resolución de litigios de consumo',

@@ -181,6 +181,7 @@ export const ca = {
   'legal.provider.title': 'Proveïdor de serveis',
   'legal.contact.title': 'Mitjans de contacte',
   'legal.contact.emailLabel': 'Adreça de correu electrònic:',
+  'legal.contact.email': 'info@bonanitsuenoinfantil.com',
   'legal.contact.other': 'Altres mitjans de contacte: Instagram',
   'legal.company.title': "Informació sobre l'empresa",
   'legal.disputes.title': 'Resolució de disputes per a consumidors',

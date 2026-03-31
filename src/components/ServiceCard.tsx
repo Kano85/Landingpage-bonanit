@@ -15,30 +15,48 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   const { t } = useLanguage();
 
-  // Map service ID to translation keys
-  const planNumber =
+  const translatedService =
     service.id === 'plan-basico'
-      ? '1'
+      ? {
+          title: t('service.plan1.title'),
+          duration: t('service.plan1.duration'),
+          desc1: t('service.plan1.desc1'),
+          desc2: t('service.plan1.desc2'),
+          button: t('service.plan1.button'),
+          features: [
+            t('service.plan1.f1'),
+            t('service.plan1.f2'),
+            t('service.plan1.f3'),
+            t('service.plan1.f4'),
+            t('service.plan1.f5'),
+          ],
+        }
       : service.id === 'plan-extension'
-        ? '2'
-        : '3';
-
-  const translatedService = {
-    title: t(`service.plan${planNumber}.title`),
-    duration: t(`service.plan${planNumber}.duration`),
-    desc1: t(`service.plan${planNumber}.desc1`),
-    desc2: t(`service.plan${planNumber}.desc2`),
-    button: t(`service.plan${planNumber}.button`),
-    features: [
-      t(`service.plan${planNumber}.f1`),
-      t(`service.plan${planNumber}.f2`),
-      t(`service.plan${planNumber}.f3`),
-      t(`service.plan${planNumber}.f4`),
-      planNumber === '1' || planNumber === '2'
-        ? t(`service.plan${planNumber}.f5`)
-        : null,
-    ].filter(Boolean),
-  };
+        ? {
+            title: t('service.plan2.title'),
+            duration: t('service.plan2.duration'),
+            desc1: t('service.plan2.desc1'),
+            desc2: t('service.plan2.desc2'),
+            button: t('service.plan2.button'),
+            features: [
+              t('service.plan2.f1'),
+              t('service.plan2.f2'),
+              t('service.plan2.f3'),
+              t('service.plan2.f4'),
+            ],
+          }
+        : {
+            title: t('service.plan3.title'),
+            duration: t('service.plan3.duration'),
+            desc1: t('service.plan3.desc1'),
+            desc2: t('service.plan3.desc2'),
+            button: t('service.plan3.button'),
+            features: [
+              t('service.plan3.f1'),
+              t('service.plan3.f2'),
+              t('service.plan3.f3'),
+            ],
+          };
   return (
     <div
       className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto mb-16 md:mb-24 ${

@@ -182,6 +182,7 @@ export const de = {
   'legal.provider.title': 'Diensteanbieter',
   'legal.contact.title': 'Kontaktmöglichkeiten',
   'legal.contact.emailLabel': 'E-Mail-Adresse:',
+  'legal.contact.email': 'info@bonanitsuenoinfantil.com',
   'legal.contact.other': 'Weitere Kontaktmöglichkeiten: Instagram',
   'legal.company.title': 'Angaben zum Unternehmen',
   'legal.disputes.title': 'Verbraucherstreitbeilegung',

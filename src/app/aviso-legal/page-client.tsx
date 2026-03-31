@@ -1,5 +1,6 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -14,6 +15,21 @@ const socialProfiles = [
   },
 ];
 
+interface DetailItem {
+  title: string;
+  content: ReactNode;
+}
+
+interface SectionBlock {
+  heading?: string;
+  content: ReactNode;
+}
+
+interface SectionItem {
+  title: string;
+  blocks: SectionBlock[];
+}
+
 export default function AvisoLegalPageClient() {
   const { t } = useLanguage();
   const emailLabelKey = t('legal.contact.emailLabel');
@@ -26,7 +42,7 @@ export default function AvisoLegalPageClient() {
     sidebarTitleKey === 'legal.contact.sidebarTitle'
       ? t('legal.contact.title')
       : sidebarTitleKey;
-  const details = [
+  const details: DetailItem[] = [
     {
       title: t('legal.provider.title'),
       content: (
@@ -56,7 +72,7 @@ export default function AvisoLegalPageClient() {
       ),
     },
   ];
-  const sections = [
+  const sections: SectionItem[] = [
     {
       title: t('legal.company.title'),
       blocks: [
