@@ -78,7 +78,7 @@ export default function ServiceCard({
                 key={idx}
                 className="flex items-start gap-3 text-[#5c6f82] text-sm md:text-base leading-relaxed"
               >
-                <span className="text-[#e6a57e] font-bold flex-shrink-0 mt-1">
+                <span className="text-[#e6a57e] font-bold shrink-0 mt-1">
                   ✓
                 </span>
                 <span>{featureText}</span>
@@ -96,7 +96,7 @@ export default function ServiceCard({
 
           <a
             href={service.buttonLink}
-            className="mt-4 inline-flex items-center justify-center rounded-full !bg-[#d4a574] px-8 py-4 font-bold !text-white no-underline shadow-[0_10px_24px_rgba(212,165,116,0.25)] transition-all duration-300 hover:translate-y-[-2px] hover:!bg-[#c9975e] hover:!text-white hover:no-underline hover:shadow-[0_14px_30px_rgba(201,151,94,0.3)]"
+            className="mt-4 inline-flex items-center justify-center rounded-full bg-[#d4a574]! px-8 py-4 font-bold text-white! no-underline shadow-[0_10px_24px_rgba(212,165,116,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#c9975e]! hover:text-white! hover:no-underline hover:shadow-[0_14px_30px_rgba(201,151,94,0.3)]"
           >
             {translatedService.button}
           </a>

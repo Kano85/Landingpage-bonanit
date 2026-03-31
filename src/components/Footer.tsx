@@ -9,7 +9,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export default function Footer() {
   const { t } = useLanguage();
   return (
-    <footer className="bg-[#faf8f5] border-t-2 border-[#e8e4df] mt-auto">
+    <footer className="bg-surface border-t-2 border-border mt-auto">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="py-20">
@@ -29,23 +29,23 @@ export default function Footer() {
                   className="h-14 w-auto"
                 />
               </Link>
-              <p className="text-[#7d8b88] text-base leading-relaxed max-w-xs mb-8">
+              <p className="text-text-muted text-base leading-relaxed max-w-xs mb-8">
                 {t('footer.tagline')}
               </p>
 
               {/* Social Links */}
               <div className="pt-2">
                 <p
-                  className="text-sm font-bold text-[#5a7c7f] mb-4"
+                  className="text-sm font-bold text-primary mb-4"
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {t('footer.follow')}
                 </p>
-                <div className="flex items-center gap-5 text-[#7d8b88]">
+                <div className="flex items-center gap-5 text-text-muted">
                   <a
                     href="#"
                     aria-label="Facebook"
-                    className="hover:text-[#5a7c7f] transition-colors duration-300 p-2 bg-white rounded-lg hover:bg-[#f5f0e6]"
+                    className="rounded-lg p-2 transition-colors duration-300 hover:text-primary"
                   >
                     <svg
                       width="24"
@@ -60,7 +60,7 @@ export default function Footer() {
                   <a
                     href="#"
                     aria-label="Instagram"
-                    className="hover:text-[#5a7c7f] transition-colors duration-300 p-2 bg-white rounded-lg hover:bg-[#f5f0e6]"
+                    className="rounded-lg p-2 transition-colors duration-300 hover:text-primary"
                   >
                     <svg
                       width="24"
@@ -75,7 +75,7 @@ export default function Footer() {
                   <a
                     href="#"
                     aria-label="Twitter"
-                    className="hover:text-[#5a7c7f] transition-colors duration-300 p-2 bg-white rounded-lg hover:bg-[#f5f0e6]"
+                    className="rounded-lg p-2 transition-colors duration-300 hover:text-primary"
                   >
                     <svg
                       width="24"
@@ -90,7 +90,7 @@ export default function Footer() {
                   <a
                     href="#"
                     aria-label="LinkedIn"
-                    className="hover:text-[#5a7c7f] transition-colors duration-300 p-2 bg-white rounded-lg hover:bg-[#f5f0e6]"
+                    className="rounded-lg p-2 transition-colors duration-300 hover:text-primary"
                   >
                     <svg
                       width="24"
@@ -112,7 +112,7 @@ export default function Footer() {
                 {/* Legal Links */}
                 <nav aria-label="Enlaces del footer">
                   <h4
-                    className="text-lg font-bold text-[#5a7c7f] mb-6"
+                    className="text-lg font-bold text-primary mb-6"
                     style={{ fontFamily: 'var(--font-playfair)' }}
                   >
                     {t('footer.info')}
@@ -129,7 +129,7 @@ export default function Footer() {
                         <li key={item.id} role="listitem">
                           <Link
                             href={item.url}
-                            className="text-[#7d8b88] hover:text-[#5a7c7f] transition-colors duration-200 font-medium text-base"
+                            className="text-text-muted hover:text-primary transition-colors duration-200 font-medium text-base"
                           >
                             {getTranslatedLabel()}
                           </Link>
@@ -142,7 +142,7 @@ export default function Footer() {
                 {/* Pages */}
                 <nav aria-label="Páginas del sitio">
                   <h4
-                    className="text-lg font-bold text-[#5a7c7f] mb-6"
+                    className="text-lg font-bold text-primary mb-6"
                     style={{ fontFamily: 'var(--font-playfair)' }}
                   >
                     {t('footer.nav')}
@@ -151,7 +151,7 @@ export default function Footer() {
                     <li role="listitem">
                       <Link
                         href="/sobre-mi"
-                        className="text-[#7d8b88] hover:text-[#5a7c7f] transition-colors duration-200 font-medium text-base"
+                        className="text-text-muted hover:text-primary transition-colors duration-200 font-medium text-base"
                       >
                         {t('links.nav.about')}
                       </Link>
@@ -159,7 +159,7 @@ export default function Footer() {
                     <li role="listitem">
                       <Link
                         href="/mis-servicios"
-                        className="text-[#7d8b88] hover:text-[#5a7c7f] transition-colors duration-200 font-medium text-base"
+                        className="text-text-muted hover:text-primary transition-colors duration-200 font-medium text-base"
                       >
                         {t('links.nav.services')}
                       </Link>
@@ -167,7 +167,7 @@ export default function Footer() {
                     <li role="listitem">
                       <Link
                         href="/#contacto"
-                        className="text-[#7d8b88] hover:text-[#5a7c7f] transition-colors duration-200 font-medium text-base"
+                        className="text-text-muted hover:text-primary transition-colors duration-200 font-medium text-base"
                       >
                         {t('links.nav.contact')}
                       </Link>
@@ -188,7 +188,7 @@ export default function Footer() {
                   </p>
                   <a
                     href="https://tidycal.com/bonanit/videollamada-previa-gratuita"
-                    className="inline-flex items-center justify-center rounded-full !bg-[#d4a574] px-6 py-3 text-sm font-bold !text-white no-underline shadow-[0_10px_24px_rgba(212,165,116,0.25)] transition-all duration-300 hover:translate-y-[-2px] hover:!bg-[#c9975e] hover:!text-white hover:no-underline hover:shadow-[0_14px_30px_rgba(201,151,94,0.3)]"
+                    className="inline-flex items-center justify-center rounded-full bg-[#d4a574]! px-6 py-3 text-sm font-bold text-white! no-underline shadow-[0_10px_24px_rgba(212,165,116,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#c9975e]! hover:text-white! hover:no-underline hover:shadow-[0_14px_30px_rgba(201,151,94,0.3)]"
                   >
                     {t('footer.schedule')}
                   </a>
@@ -200,25 +200,11 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="py-6 border-t border-[#e8e4df]">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex justify-center items-center">
             <p className="text-[#7d8b88] text-sm font-medium">
               © {new Date().getFullYear()} {siteData.name}. Todos los derechos
               reservados.
             </p>
-            <div className="flex gap-6">
-              <Link
-                href="/terminos-y-condiciones"
-                className="text-[#7d8b88] hover:text-[#5a7c7f] transition-colors text-sm font-medium"
-              >
-                Términos
-              </Link>
-              <Link
-                href="/politica-de-privacidad"
-                className="text-[#7d8b88] hover:text-[#5a7c7f] transition-colors text-sm font-medium"
-              >
-                Privacidad
-              </Link>
-            </div>
           </div>
         </div>
       </div>

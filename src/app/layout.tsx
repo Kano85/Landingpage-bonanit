@@ -51,12 +51,12 @@ export default function RootLayout({
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[var(--color-background)] text-[var(--color-text)]">
+      <body className="min-h-full flex flex-col bg-background text-foreground">
         <LanguageProvider>
           {/* Skip link para accesibilidad */}
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[var(--color-primary)] text-white px-4 py-2 rounded z-50"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50"
           >
             Saltar al contenido principal
           </a>
