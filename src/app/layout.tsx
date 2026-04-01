@@ -1,5 +1,10 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Playfair_Display, Inter } from 'next/font/google';
+import {
+  Chau_Philomene_One,
+  Geist,
+  Geist_Mono,
+  Inter,
+} from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -16,10 +21,10 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-const playfair = Playfair_Display({
+const playfair = Chau_Philomene_One({
   variable: '--font-playfair',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: '400',
 });
 
 const inter = Inter({
@@ -31,6 +36,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: `${siteData.name} - ${siteData.tagline}`,
   description: `Especialistas en ${siteData.tagline.toLowerCase()}. ${siteData.ctaTexts.main}`,
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+  },
   keywords:
     'sueño infantil, maternidad, consultoría familiar, bienestar niños, rutinas sueño',
   authors: [{ name: siteData.name }],

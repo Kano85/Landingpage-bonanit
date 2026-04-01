@@ -15,7 +15,7 @@ export default function TestimonialCard({
   image,
 }: TestimonialCardProps) {
   return (
-    <article className="w-[22rem] shrink-0 rounded-[2rem] border border-white/65 bg-[#fefcf8] p-8 shadow-[0_22px_50px_rgba(34,49,48,0.14)] transition-transform duration-500 hover:-translate-y-1 md:w-[28rem]">
+    <article className="w-88 shrink-0 rounded-4xl border border-white/65 bg-[#fefcf8] p-8 shadow-[0_22px_50px_rgba(34,49,48,0.14)] transition-transform duration-500 hover:-translate-y-1 md:w-md">
       <div className="flex items-start gap-5">
         {image && (
           <Image

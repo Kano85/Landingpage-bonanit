@@ -7,7 +7,7 @@ export const es = {
   // Hero
   'hero.title': 'Dormir mejor criando con amor',
   'hero.subtitle':
-    'Soy Laura Montoy, creadora de Bonanit y te acompaño de manera respetuosa a mejorar el descanso de tu bebé.',
+    'Soy Laura Montoy, creadora de Bonanit, y te acompaño para mejorar el descanso de tu bebé de forma amorosa y respetuosa.',
   'hero.cta': 'Conozcámonos',
 
   // Questions
@@ -62,12 +62,12 @@ export const es = {
   'testimonials.title': 'Experiencias de familias que han trabajado conmigo',
 
   // CTA Final
-  'cta.final': '¿Te parece si agendamos una videollamada gratuita?',
+  'cta.final': '¿Agendamos una videollamada gratuita?',
 
   // Footer
   'footer.tagline':
     'Acompaño a familias a mejorar el descanso de sus bebés con un enfoque respetuoso, cercano y personalizado, para vivir la maternidad con más calma y confianza.',
-  'footer.follow': 'Síguenos',
+  'footer.follow': 'Sígueme',
   'footer.info': 'Información',
   'footer.nav': 'Navegación',
   'footer.connect': 'Conecta conmigo',

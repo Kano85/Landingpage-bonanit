@@ -67,7 +67,7 @@ export const ca = {
   // Footer
   'footer.tagline':
     'Acompanyo a famílies a millorar el descans dels seus nadons amb un enfocament respectuós, proper i personalitzat, per viure la maternitat amb més calma i confiança.',
-  'footer.follow': 'Segueix-nos',
+  'footer.follow': 'Segueix-me',
   'footer.info': 'Informació',
   'footer.nav': 'Navegació',
   'footer.connect': 'Connecta amb mi',

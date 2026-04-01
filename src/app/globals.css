@@ -1,11 +1,5 @@
 @import 'tailwindcss';
 
-/* ============================================
-   CUSTOM FONTS - Agrégalos en /public/fonts/
-   ============================================ */
-
-/* Ejemplo - Descomenta y modifica según tus fuentes */
-
 /* Variables de color para un diseño elegante y sofisticado */
 :root {
   --color-primary: #5a7c7f; /* Verde oliva mejorado */

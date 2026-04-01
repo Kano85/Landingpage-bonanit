@@ -8,6 +8,40 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Footer() {
   const { t } = useLanguage();
+
+  const socialLinks = [
+    {
+      name: 'Facebook',
+      url: 'https://www.facebook.com/profile.php?id=61571558230641',
+      icon: (
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1 .9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Instagram',
+      url: 'http://instagram.com/bonanit_suenoinfantil',
+      icon: (
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-.8a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4z" />
+        </svg>
+      ),
+    },
+  ];
+
   return (
     <footer className="bg-surface border-t-2 border-border mt-auto">
       <div className="container mx-auto px-4">
@@ -42,66 +76,18 @@ export default function Footer() {
                   {t('footer.follow')}
                 </p>
                 <div className="flex items-center gap-5 text-text-muted">
-                  <a
-                    href="#"
-                    aria-label="Facebook"
-                    className="rounded-lg p-2 transition-colors duration-300 hover:text-primary"
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
+                  {socialLinks.map((socialLink) => (
+                    <a
+                      key={socialLink.name}
+                      href={socialLink.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={socialLink.name}
+                      className="rounded-lg p-2 transition-colors duration-300 hover:text-primary"
                     >
-                      <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1 .9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12" />
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    aria-label="Instagram"
-                    className="rounded-lg p-2 transition-colors duration-300 hover:text-primary"
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-.8a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4z" />
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    aria-label="Twitter"
-                    className="rounded-lg p-2 transition-colors duration-300 hover:text-primary"
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.38 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 16.1 4a4.28 4.28 0 0 0-4.28 4.28c0 .34.04.67.1 1A12.15 12.15 0 0 1 3.15 5a4.28 4.28 0 0 0 1.33 5.71 4.2 4.2 0 0 1-1.94-.54v.05a4.28 4.28 0 0 0 3.44 4.2 4.3 4.3 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.97A8.6 8.6 0 0 1 2 19.54a12.14 12.14 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.18 0-.36-.01-.53A8.66 8.66 0 0 0 22.46 6z" />
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    aria-label="LinkedIn"
-                    className="rounded-lg p-2 transition-colors duration-300 hover:text-primary"
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 8.98h4v12H3v-12zm7 0h3.8v1.7h.1a4.2 4.2 0 0 1 3.8-2c4 0 4.8 2.6 4.8 6v6.3h-4v-5.6c0-1.4 0-3.3-2-3.3s-2.2 1.5-2.2 3.2v5.7h-4v-12z" />
-                    </svg>
-                  </a>
+                      {socialLink.icon}
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
@@ -162,14 +148,6 @@ export default function Footer() {
                         className="text-text-muted hover:text-primary transition-colors duration-200 font-medium text-base"
                       >
                         {t('links.nav.services')}
-                      </Link>
-                    </li>
-                    <li role="listitem">
-                      <Link
-                        href="/#contacto"
-                        className="text-text-muted hover:text-primary transition-colors duration-200 font-medium text-base"
-                      >
-                        {t('links.nav.contact')}
                       </Link>
                     </li>
                   </ul>

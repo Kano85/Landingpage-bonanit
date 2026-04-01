@@ -58,11 +58,11 @@ export default function MisServicios() {
       {/* Discount Banner */}
       <Section className="bg-linear-to-b from-[#f7f2ea] to-[#efe8dd] py-14 md:py-18">
         <div className="mx-auto max-w-5xl">
-          <div className="rounded-[2rem] border border-white/70 bg-white/72 p-8 text-center shadow-[0_24px_55px_rgba(79,95,111,0.08)] backdrop-blur-sm md:p-12">
-            <div className="mb-5 inline-flex items-center rounded-full bg-[#d4a574]/14 px-4 py-2 text-sm font-semibold tracking-[0.18em] text-[#b77c46] uppercase">
+          <div className="rounded-[2rem] border border-[#f0d7b6] bg-linear-to-br from-[#fffaf3] via-[#fff4e8] to-[#f6eadc] p-8 text-center shadow-[0_28px_60px_rgba(179,126,72,0.16)] md:p-12">
+            <div className="mb-6 inline-flex items-center rounded-full border border-[#e5bf93] bg-[#d4a574]/18 px-5 py-2.5 text-base font-bold tracking-[0.2em] text-[#b77c46] uppercase md:text-lg">
               {t('services.discount.title')}
             </div>
-            <p className="mx-auto max-w-3xl text-xl leading-9 text-[#425a58] md:text-[1.55rem] md:leading-10">
+            <p className="mx-auto max-w-3xl text-2xl leading-10 text-[#425a58] md:text-[1.95rem] md:leading-[3.2rem]">
               {t('services.discount.p1')}
             </p>
             <p className="mx-auto mb-0 mt-5 max-w-2xl text-base leading-8 text-[#6a7875] md:text-lg">
@@ -74,18 +74,6 @@ export default function MisServicios() {
 
       {/* Services Section */}
       <Section className="bg-[#f6f2eb] py-18 md:py-28">
-        <div className="mx-auto mb-14 max-w-4xl text-center md:mb-18">
-          <h2
-            className="mb-5 text-3xl font-bold text-[#425d61] md:text-5xl"
-            style={{ fontFamily: 'var(--font-playfair)' }}
-          >
-            {t('services.hero.title')}
-          </h2>
-          <p className="mx-auto mb-0 max-w-3xl text-lg leading-8 text-[#60706e] md:text-[1.16rem] md:leading-9">
-            {t('services.hero.subtitle')}
-          </p>
-        </div>
-
         <div className="max-w-7xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard
@@ -108,12 +96,9 @@ export default function MisServicios() {
               >
                 {t('services.faq.title')}
               </h2>
-              <p className="max-w-md text-lg leading-8 text-[#61716f] md:text-[1.08rem]">
-                {t('services.hero.subtitle')}
-              </p>
               <a
                 href="https://tidycal.com/bonanit/videollamada-previa-gratuita"
-                className="mt-7 inline-flex items-center justify-center rounded-full bg-[#d4a574]! px-8 py-4 text-base font-bold text-white! no-underline shadow-[0_10px_24px_rgba(212,165,116,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#c9975e]! hover:text-white! hover:no-underline hover:shadow-[0_14px_30px_rgba(201,151,94,0.3)]"
+                className="mt-3 inline-flex items-center justify-center rounded-full bg-[#d4a574]! px-8 py-4 text-base font-bold text-white! no-underline shadow-[0_10px_24px_rgba(212,165,116,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#c9975e]! hover:text-white! hover:no-underline hover:shadow-[0_14px_30px_rgba(201,151,94,0.3)]"
               >
                 {t('services.cta.button')}
               </a>

@@ -5,9 +5,9 @@ export const de = {
   'nav.services': 'Meine Dienstleistungen',
 
   // Hero
-  'hero.title': 'Besser schlafen mit liebevoller Erziehung',
+  'hero.title': 'Besser schlafen mit liebevoller Bindung',
   'hero.subtitle':
-    'Ich bin Laura Montoy, die Gründerin von Bonanit, und ich begleite Sie respektvoll dabei, den Schlaf Ihres Babys zu verbessern.',
+    'Ich bin Laura Montoy, Gründerin von Bonanit, und ich begleite dich dabei, den Schlaf deines Babys zu verbessern – liebevoll und achtsam.',
   'hero.cta': 'Kennenlernen',
 
   // Questions
@@ -68,7 +68,7 @@ export const de = {
   // Footer
   'footer.tagline':
     'Ich begleite Familien dabei, den Schlaf ihrer Babys mit einem respektvollen, persönlichen und personalisierten Ansatz zu verbessern, um die Mutterschaft mit mehr Ruhe und Vertrauen zu leben.',
-  'footer.follow': 'Folgen Sie mir',
+  'footer.follow': 'Folge mir',
   'footer.info': 'Information',
   'footer.nav': 'Navigation',
   'footer.connect': 'Verbinden Sie sich mit mir',

@@ -250,23 +250,25 @@ export default function PrivacyPageClient() {
         <div className="mx-auto max-w-5xl px-4">
           <div className="grid gap-8 md:grid-cols-3 md:gap-10">
             {summaryDetails.map((detail) => (
-              <div key={detail.title}>
-                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-[#7c938a]">
+              <div key={detail.title} className="py-1">
+                <p className="mb-2 text-sm font-semibold uppercase tracking-[0.22em] text-[#7c938a]">
                   {detail.title}
                 </p>
-                <ul className="space-y-2 pl-5 text-[1.02rem] leading-7 text-[#425a58] marker:text-[#b9824f]">
+                <div className="space-y-1 text-[1rem] leading-[1.45] text-[#425a58]">
                   {detail.items.map((item) => (
-                    <li key={item}>{item}</li>
+                    <div key={item}>
+                      {item}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
 
           <div className="mt-12 border-t border-[#e6dccb] pt-12 md:mt-16 md:pt-16">
-            <div className="space-y-12 md:space-y-14">
+            <div className="space-y-8 md:space-y-10">
               {sections.map((section) => (
-                <section key={section.title} className="max-w-4xl">
+                <section key={section.title} className="max-w-4xl py-2">
                   <h2
                     className="text-[2rem] font-bold leading-tight text-[#4b6664] md:text-[2.8rem]"
                     style={{ fontFamily: 'var(--font-playfair)' }}
@@ -275,7 +277,7 @@ export default function PrivacyPageClient() {
                   </h2>
 
                   {section.paragraphs ? (
-                    <div className="mt-4 space-y-3 text-[1.02rem] leading-8 text-[#4e615f] [&>p]:mb-0">
+                    <div className="mt-6 space-y-4 text-[1.02rem] leading-8 text-[#4e615f] [&>p]:mb-0 [&_a]:align-baseline">
                       {section.paragraphs.map((paragraph, index) => (
                         <p key={`${section.title}-paragraph-${index}`}>{paragraph}</p>
                       ))}
@@ -283,14 +285,20 @@ export default function PrivacyPageClient() {
                   ) : null}
 
                   {section.bullets ? (
-                    <ul className="mt-5 space-y-3 pl-5 text-[1.02rem] leading-8 text-[#4e615f] marker:text-[#b9824f]">
+                    <ul className="mt-7 space-y-4 pt-2 text-[1.02rem] leading-8 text-[#4e615f]">
                       {section.bullets.map((bullet) => (
-                        <li key={bullet}>{bullet}</li>
+                        <li key={bullet} className="flex items-start gap-3">
+                          <span
+                            aria-hidden="true"
+                            className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[#b9824f]"
+                          ></span>
+                          <span>{bullet}</span>
+                        </li>
                       ))}
                     </ul>
                   ) : null}
 
-                  {section.cta}
+                  {section.cta ? <div className="mt-8">{section.cta}</div> : null}
                 </section>
               ))}
             </div>

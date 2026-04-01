@@ -34,14 +34,14 @@ export default function Home() {
       role: 'mamá de Teo, 10 meses',
       content:
         '«Desde las primeras conversaciones Laura dio un par de tips a cambiar y ¡funcionaron! Luego el trabajo fue día a día, siempre ella observando y preguntando para adaptarse a la situación. MUY buena, realmente muy buena coach. Hoy termina el plan y me voy con una caja llena de herramientas para seguir mejorando el sueño de mi bebé. ¡Muchas gracias Laura!»',
-      image: '/images/IMG-20250219-WA0014-3.jpg',
+      image: '/images/fernanda.jpeg',
     },
     {
       name: 'Patri',
       role: 'mamá de Théo, 7 meses',
       content:
         '«Al principio tenía dudas porque no quería dejar llorar a mi bebé, pero Laura creó un plan sensible y adaptado a nosotros. El seguimiento diario fue excelente y sus recomendaciones nos ayudaron a saber cómo actuar en cada situación.»',
-      image: '/images/Ellipse-3.png',
+      image: '/images/mama-patri.jpg',
     },
   ];
 
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-5">
-            {questionItems.map((question, index) => (
+            {questionItems.map((question) => (
               <article
                 key={question}
                 className="group rounded-[1.5rem] border border-[#e7ddd1] bg-white/85 p-6 shadow-[0_16px_34px_rgba(79,95,111,0.06)] transition-all duration-300 hover:border-[#d8c0a2] hover:shadow-[0_22px_44px_rgba(79,95,111,0.1)] md:p-7"
@@ -106,9 +106,6 @@ export default function Home() {
                 <div className="flex items-start gap-5">
                   <div className="mt-1 h-14 w-[3px] shrink-0 rounded-full bg-linear-to-b from-[#d4a574] via-[#c8a17a] to-transparent"></div>
                   <div className="min-w-0">
-                    <div className="mb-3 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#b9824f]">
-                      Pregunta 0{index + 1}
-                    </div>
                     <p
                       className="mb-0 text-lg font-medium leading-8 text-[#425a58] md:text-[1.28rem] md:leading-9"
                       style={{ fontFamily: 'var(--font-inter)' }}
@@ -210,10 +207,6 @@ export default function Home() {
             >
               {t('faq.title')}
             </h2>
-            <p className="mx-auto mb-0 max-w-2xl text-base leading-8 text-[#677774] md:text-lg">
-              Respuestas claras, prácticas y realistas sobre cómo trabajo y qué
-              puedes esperar del proceso.
-            </p>
           </div>
           <div className="mt-10 space-y-5">
             <Accordion title={t('faq.q1')}>
